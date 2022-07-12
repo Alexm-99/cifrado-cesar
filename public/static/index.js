@@ -24,4 +24,13 @@ function PostMenu(){
     document.getElementById(id).submit();
  }
 
-
+function envioclave(id){
+    let clave =prompt("Ingrese la clave");
+ 
+    if (clave != null ) {
+    $(`#${id}`).attr('value', clave ); //Cambiando valor a mostrar
+ 
+    }else{
+        alert("No ingreso ninguna clave");
+    }
+}

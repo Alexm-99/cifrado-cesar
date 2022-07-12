@@ -82,7 +82,7 @@ aria-hidden="true">
                           <div class="input-group col-md-12">
                               <input type="hidden" value="xd" name="apodo" id="apodo">
                               <input type="hidden" value="10" name="clave"  id="clave">
-                        <input name="mensaje" type="text" class="form-control input-lg" placeholder="Texto plano" />
+                        <input name="mensaje" type="text" class="form-control input-lg" placeholder="Texto plano a cifrar" />
                         <span class="input-group-btn">
                             <button class="btn btn-info btn-lg" type="button" onclick="PostMenu()">
                                 <i class="glyphicon glyphicon-transfer"></i>
@@ -109,25 +109,26 @@ aria-hidden="true">
                    {% for cifrar in cifrarT %}
                    
                    <div class="media">
+                     
+                      
+
                        <form action="" method="post" id="formulario{{cifrar.id}}">
                         {% csrf_token %}
-                        <input type="hidden" value="{{cifrar.id}}" name="buscando">
-                     <a href="" onclick="consulta('formulario{{cifrar.id}}')" class="pull-right"> <i class="glyphicon glyphicon-transfer"></i> Descifrar</a> <br> 
-                      </form>
-                       <p class="pull-right"><small>5 days ago</small></p> 
-
-                        <a class="media-left" href="#">
-                         <i class="glyphicon glyphicon-user"></i>
-                        </a>
-                       
+                     
+                     <input type="hidden" name="texto" value="10" id="textoclave{{cifrar.id}}"> 
+                     <button onclick="envioclave(`textoclave{{cifrar.id}}`)" class="btn btn-outline-info pull-right btn-envio" id="index_btn" name="buscando" value="{{cifrar.id}}"> <i class="glyphicon glyphicon-transfer btn-xd"></i> <span class="btn-xd">Descifrar</span>  
+                        </button><br> 
+                    </form>
+                     
                         <div class="media-body">
                             
-                          <h4 class="media-heading user_name">{{cifrar.nickname}}</h4>
+                          <h4 class="media-left media-heading user_name"><i class="glyphicon glyphicon-user"></i> {{cifrar.nickname}}</h4>
                           {{cifrar.message}}
                           
                           <!-- <p><small><a href="">Like</a> - <a href="">Share</a></small></p> -->
                        
                         </div>
+                        <!-- <p class="pull-right"><small>5 days ago</small></p>  -->
                             <hr>
                       </div>
                     {% endfor %}
@@ -139,7 +140,7 @@ aria-hidden="true">
             </div>
             <div class="col-md-4">
                 <h2>Descifrado</h2>
-                <p> La siguiente información desaparecera en 30 segundos: .</p>
+                <p> texto Descifrado: .</p>
                 <p>{{consulta}}</p>
             </div>
         </div>
@@ -152,18 +153,18 @@ aria-hidden="true">
 				<div class="row">
 					<div class="col-md-12 text-center">
 						<div class="copyright">
-							<p>© <span>2022</span> <a href="#" class="transition">Alex Medranda</a> All rights reserved.</p>
+							<p>© <span>2022</span> <a href="#" class="transition">Alex Medranda- Medrandacode</a> Todos los derechos reservados</p>
                            
                         </div>
                        
                      
 					</div> <div class="media-Social">
                             <ul class="social ">
-                                <li> <a href="#"> <i class=" fa fa-facebook"></i> </a> </li>
-                                <li> <a href="#"> <i class="fa fa-instagram"></i> </a> </li>
-                                <li> <a href="#"> <i class="fa fa-youtube"></i> </a> </li>
+                                <li> <a target="blanket" href="https://facebook.com/medrandacode"> <i class=" fa fa-facebook"></i> </a> </li>
+                                <li> <a target="blanket" href="https://instagram.com/medrandacode"> <i class="fa fa-instagram"></i> </a> </li>
+                                <li> <a target="blanket" href="https://n9.cl/yrcyo"> <i class="fa fa-youtube"></i> </a> </li>
                                 
-                                <li> <a href="#"> <i class="fa fa-github"></i> </a> </li>
+                                <li> <a target="blanket" href="https://github.com/medrandacode"> <i class="fa fa-github"></i> </a> </li>
                             </ul>
                         </div>
 				</div>

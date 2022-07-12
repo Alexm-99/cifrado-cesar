@@ -62,7 +62,9 @@ figcaption{
 color: #588ff5;
 }
 
-
+.btn-envio:hover .btn-xd{
+    color: #fff;
+}
 /* FOOTER */
 
 footer{
