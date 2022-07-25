@@ -15,9 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from app.views import inicio
+from app.views import inicio, delete
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', inicio, name = 'index'),
+     path('delete/<str:pk>', delete, name="delete"),
     
 ]

@@ -16,7 +16,7 @@
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 
-<body>
+<body onload="timeDC(`{{llave}}`)">
 
 <!-- MODAL -->
 <!-- Full screen modal -->
@@ -142,6 +142,12 @@ aria-hidden="true">
                 <h2>Descifrado</h2>
                 <p> texto Descifrado: .</p>
                 <p>{{consulta}}</p>
+                <h1 class="text-center" id="count-down-timer"></h1>
+               
+                <form id="envio" action="/delete/{{cod_cifrado}}" method="post"> {% csrf_token %}</form>
+                
+
+                <p ></p>
             </div>
         </div>
     </div>
