@@ -140,8 +140,10 @@ aria-hidden="true">
             </div>
             <div class="col-md-4">
                 <h2>Descifrado</h2>
-                <p> texto Descifrado: .</p>
+               
                 <p>{{consulta}}</p>
+                
+                 <p id="texto"> </p>
                 <h1 class="text-center" id="count-down-timer"></h1>
                
                 <form id="envio" action="/delete/{{cod_cifrado}}" method="post"> {% csrf_token %}</form>

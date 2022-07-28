@@ -36,6 +36,8 @@ function envioclave(id){
 }
 function timeDC(llave, id){
     if(llave=="1"){
+      document.getElementById("texto").innerHTML = "<hr> Esta información se eliminará en: ";
+      
         inicio();
         // window.location.href = `/delete/${id}`;
     // $(`#envio`).attr('action', `{% url 'delete' ${id} %}` ); //Cambiando valor a mostrar
